@@ -72,10 +72,11 @@ html {
   /* transform: translate(0%, -13%); */
   z-index: 0;
   background-image: url("https://res.cloudinary.com/dytb4ayqj/image/upload/v1688241761/background_nexxec.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: 100%;
+  
 }
-
+/* <input autofocus={(window.screen.width <= 480) ? false : true } */
 #scrollto {
 background-color: transparent;
 width: 40vw;
