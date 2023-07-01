@@ -1,0 +1,223 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.showingdrawing {
+ max-height: 360px;
+ height: auto;
+ width: auto;
+}
+
+.showingdrawing:hover {
+  transform: scale(1.02);
+ }
+
+.center {
+  text-align: center;
+}
+
+#login {
+  padding-top: 20vh;
+}
+
+#button-login {
+  border-style: hidden;
+  outline: none;
+  background-color:rgba(0, 0, 0, 0.394);
+  font-size: 20px;
+  color: black;
+  margin-top:3vh;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+#button {
+  border-style: hidden;
+  outline: none;
+  background-color:transparent;
+  font-size: 30px;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.pregunta {
+  font-size: 4vh;
+  color: rgb(5, 27, 5);
+  width: 8vh;
+  height: 8vh;
+  background-color: transparent;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/010/331/351/original/watercolor-paint-stains-backgrounds-art-element-illustration-for-your-design-free-png.png');
+  background-size: 8vh, 8vh;
+  background-repeat: no-repeat;
+  border-style: none;
+  font-family: 'Headers', 'Handwriting';
+  z-index: 10;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  position: absolute;
+  top: 80pt;
+  right: 70pt;
+
+}
+
+.myform {
+  text-align:center;
+  
+}
+
+.background {
+  width: 100vw;
+  height: 200%;
+  transform: translate(0%, -13%);
+  z-index: 0;
+  background-image: url("https://res.cloudinary.com/dygjz8yhp/image/upload/v1688165009/HOME_o5kzxy.jpg");
+  background-size: cover;
+}
+
+#scrollto {
+background-color: transparent;
+width: 40vw;
+height: 40vh;
+top: 60vh;
+position: absolute;
+left: 50vw;
+z-index: 10;
+transform: translate(-50%, -50%);
+}
+
+.heading-enter {
+  font-family: "Headers", sans-serif;
+  position: fixed;
+  z-index: 5;
+  text-decoration: none;
+  color: rgba(13, 45, 13, 0.815);
+  top: 100vh;
+  right: 50vw;
+  font-size: 10vh;
+  transform: translate(50%,-50%);
+}
+
+#myform {
+  border-style: hidden;
+  outline: none;
+  background-color:rgba(185, 185, 185, 0.343);
+  color: rgb(8, 29, 8);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+#myform-main {
+  border-style: hidden;
+  font-family: "Handwriting", sans-serif;
+  width: 75vw;
+  outline: none;
+  font-size: 20vh;
+  background-image: url("https://res.cloudinary.com/dygjz8yhp/image/upload/v1688166733/line_new_wdf96n.png");
+  background-size: contain;
+  color: rgb(8, 29, 8);
+  padding: 30px;
+  margin: 40px;
+  border-radius: 0px;
+  background-repeat: no-repeat;
+}
+
+#drawing{
+  padding: 10px;
+
+}
+
+.delete{
+  padding: 20px;
+}
+
+.heading {
+  font-family: 'Headers', Helvetica, sans-serif;
+  text-align: center;
+}
+
+
+.heading-noresults {
+  font-family: 'Headers', Helvetica, sans-serif;
+  text-align: left;
+  left: 45%;
+  top: 50%;
+  width: 60%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  font-size: 8vh;
+  color: rgb(205, 76, 76);
+}
+
+.heading-login {
+  font-family: 'Headers', Helvetica, sans-serif;
+  text-align: center;
+  font-size: 10vh;
+}
+
+.handwriting {
+  font-family:'Handwriting', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+
+#handwriting {
+  font-size: 2vh;
+  max-width: 400px;
+
+}
+
+#drawings-index {
+  z-index: 3;
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.home {
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.landing{
+  background-color:rgb(185, 152, 110);
+}
+
+.body {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+#footer {
+  font-family: "Handwriting";
+  height:110px;
+  width: 100%; 
+  padding-top: 2vh;
+  background-color: white;
+  background-image: none;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  position: fixed;
+  bottom: 0pt;
+  font-size: 12px;
+  left: 0pt;
+}
+
+#foot {
+  color: blue;
+  font-family: "Headers";
+  font-size: 3vh;
+  text-decoration: none;
+}
+
