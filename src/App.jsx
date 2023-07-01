@@ -7,7 +7,6 @@ import { Landing } from "./Landing";
 import { Contact } from "./Contact";
 import { Login } from "./Login";
 import { Slide } from "./Slide";
-import { Signup } from "./Signup";
 
 function App() {
   return (
@@ -17,8 +16,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/slide" element={<Slide />} />
-          <Route path="/signup" element={<Signup />} />
-
           <Route path="/contact" element={<Contact />} />
           <Route path="/home" element={<Home />} />
           <Route path="/changemachine" element={<ChangeMachine />} />
