@@ -3,7 +3,7 @@ html {
 }
 
 .showingdrawing {
- max-height: 360px;
+ max-height: 45vh;
  height: auto;
  width: auto;
 }
