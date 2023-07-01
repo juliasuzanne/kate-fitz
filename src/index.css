@@ -67,12 +67,12 @@ html {
 }
 
 .background {
-  width: 100%;
+  width: 100vw;
   height: 400%;
   /* transform: translate(0%, -13%); */
   z-index: 0;
   background-image: url("https://res.cloudinary.com/dytb4ayqj/image/upload/v1688241761/background_nexxec.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -80,7 +80,7 @@ html {
 background-color: transparent;
 width: 40vw;
 height: 40vh;
-top: 30vw;
+top: 42vw;
 position: absolute;
 left: 50vw;
 z-index: 10;
