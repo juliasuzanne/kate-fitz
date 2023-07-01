@@ -117,8 +117,11 @@ transform: translate(-50%, -50%);
   background-image: url("https://res.cloudinary.com/dygjz8yhp/image/upload/v1688166733/line_new_wdf96n.png");
   background-size: contain;
   color: rgb(8, 29, 8);
-  padding: 30px;
-  margin: 40px;
+  padding-bottom: 4vw;
+  margin-bottom: 2vw;
+  margin-top: 5vw;
+
+  
   border-radius: 0px;
   background-repeat: no-repeat;
 }
