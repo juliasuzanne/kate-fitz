@@ -8,7 +8,9 @@ export function ModalQuestion(props) {
           <button className="modal-question-close" type="button" onClick={props.onClose}>
             OK
           </button>
-          <p id="handwriting">Try searching "blue", or "museum"</p>
+          <p id="handwriting" className="center">
+            Try searching 'blue', or 'museum'
+          </p>
         </div>
       </div>
     );
