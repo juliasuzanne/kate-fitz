@@ -1,6 +1,6 @@
 import { Header } from "./Header";
 import { Home } from "./Home";
-import { Navigate, BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ChangeMachine } from "./ChangeMachine";
 import "./App.css";
 import { Landing } from "./Landing";
