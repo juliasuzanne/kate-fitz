@@ -144,15 +144,24 @@ transform: translate(-50%, -50%);
 
 .heading-noresults {
   font-family: 'Headers', Helvetica, sans-serif;
-  text-align: center;
-  left: 50%;
-  top: 50%;
   width: 60%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  font-size: 8vh;
-  color: rgb(114, 114, 114);
+  font-size: 6vw;
+  padding-left: 25%;
+  animation: test-spin 7s infinite linear;
 }
+
+@keyframes test-spin {
+    0% { transform: scale(1.01); color: lightgrey}
+    25% {transform: scale(1); color: grey}
+    50% {transform: scale(1.01); color: lightgrey}
+    75% { transform: scale(1); color: rgb(73, 120, 114)}
+    100% { transform: scale(1.01); color: lightgrey}
+
+
+
+
+  }
+
 
 .heading-login {
   font-family: 'Headers', Helvetica, sans-serif;
