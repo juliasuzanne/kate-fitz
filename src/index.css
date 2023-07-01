@@ -209,13 +209,13 @@ body {
 
 #footer {
   font-family: "Handwriting";
-  height:110px;
+  height:auto;
   width: 100%; 
-  padding-top: 2vh;
+  padding-top: 1vh;
   background-color: white;
   position: fixed;
-  bottom: -4vh;
-  font-size: 10px;
+  bottom: 0vh;
+  font-size: 1.5vh;
   left: 0pt;
 
 }
@@ -223,7 +223,7 @@ body {
 #foot {
   color: blue;
   font-family: "Headers";
-  font-size: 4vh;
+  font-size: 3.5vh;
   text-decoration: none;
 }
 
