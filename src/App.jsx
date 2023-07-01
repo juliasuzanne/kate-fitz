@@ -16,9 +16,6 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route>
-            <Route element={<Navigate to="/" replace />} />
-          </Route>
           <Route path="/slide" element={<Slide />} />
           <Route path="/signup" element={<Signup />} />
 
