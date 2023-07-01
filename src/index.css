@@ -213,20 +213,17 @@ body {
   width: 100%; 
   padding-top: 2vh;
   background-color: white;
-  background-image: none;
-  background-repeat: repeat;
-  background-attachment: scroll;
-  background-position: 0% 0%;
   position: fixed;
-  bottom: 0pt;
-  font-size: 12px;
+  bottom: -4vh;
+  font-size: 10px;
   left: 0pt;
+
 }
 
 #foot {
   color: blue;
   font-family: "Headers";
-  font-size: 3vh;
+  font-size: 4vh;
   text-decoration: none;
 }
 
