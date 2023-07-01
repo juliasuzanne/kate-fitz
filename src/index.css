@@ -147,7 +147,6 @@ transform: translate(-50%, -50%);
   width: 60%;
   font-size: 6vw;
   padding-left: 25%;
-  padding-top:14vh;
   animation: test-spin 7s infinite linear;
 }
 
