@@ -24,10 +24,10 @@ html {
   border-style: hidden;
   outline: none;
   background-color:rgba(0, 0, 0, 0.394);
-  font-size: 20px;
+  font-size: 2vw;
   color: black;
-  margin-top:3vh;
-  padding: 10px;
+  margin-top:3vw;
+  padding: 1vw;
   border-radius: 100%;
 }
 
@@ -156,7 +156,13 @@ transform: translate(-50%, -50%);
 .heading-login {
   font-family: 'Headers', Helvetica, sans-serif;
   text-align: center;
-  font-size: 10vh;
+  font-size: 5vw;
+}
+
+.heading-contact {
+  font-family: 'Headers', Helvetica, sans-serif;
+  text-align: center;
+  font-size: 10vw;
 }
 
 .handwriting {
