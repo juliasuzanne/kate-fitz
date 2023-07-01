@@ -3,7 +3,6 @@ import { Home } from "./Home";
 import { Navigate, BrowserRouter, Routes, Route } from "react-router-dom";
 import { ChangeMachine } from "./ChangeMachine";
 import "./App.css";
-import "/public/fonts/Calinastiya.ttf";
 import { Landing } from "./Landing";
 import { Contact } from "./Contact";
 import { Login } from "./Login";
