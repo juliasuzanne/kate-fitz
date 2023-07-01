@@ -142,17 +142,16 @@ transform: translate(-50%, -50%);
   text-align: center;
 }
 
-
 .heading-noresults {
   font-family: 'Headers', Helvetica, sans-serif;
-  text-align: left;
-  left: 45%;
+  text-align: center;
+  left: 50%;
   top: 50%;
   width: 60%;
   position: fixed;
   transform: translate(-50%, -50%);
   font-size: 8vh;
-  color: rgb(205, 76, 76);
+  color: rgb(114, 114, 114);
 }
 
 .heading-login {

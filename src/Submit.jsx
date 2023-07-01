@@ -34,7 +34,7 @@ export function Submit(props) {
 
   const checkCount = () => {
     if (count == 0 && checked == true) {
-      setText("No Results : (");
+      setText("No Results");
     } else {
       setText("   ");
     }
