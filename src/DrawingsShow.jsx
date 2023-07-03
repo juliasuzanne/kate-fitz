@@ -20,13 +20,13 @@ export function DrawingsShow(props) {
 
         <form onSubmit={handleSubmit}>
           <div>
-            Title: <input defaultValue={props.drawing.name} name="name" type="string" />
-          </div>
-          <div>
             Image Url: <input defaultValue={props.drawing.url} name="url" type="string" />
           </div>
           <div>
             Tags: <input defaultValue={props.drawing.tags} name="tags" type="string" />
+          </div>
+          <div>
+            Using Images?: <input id="myform" name="using_Images" defaultValue="false" type="checkbox" />
           </div>
           <div>
             Description: <input defaultValue={props.drawing.description} name="description" type="string" />
