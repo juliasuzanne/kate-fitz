@@ -73,7 +73,7 @@ export function ChangeMachine() {
   const handleCreateDrawing = (params, successCallback) => {
     console.log("handleCreateDrawing", params);
     axios.post("https://kate.fly.dev/drawings.json", params).then((response) => {
-      setDrawings([...drawings, response.data]);
+      //setDrawings([...drawings, response.data]);
       successCallback();
     });
   };
