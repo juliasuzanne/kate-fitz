@@ -6,10 +6,9 @@ import { useState, useEffect } from "react";
 
 export function Slide(props) {
   const [images, setImages] = useState([]);
-  const [imageId, setImagesId] = useState([]);
 
   const handleGetImages = () => {
-    setImages(props.images.map((image) => image.url));
+    setImages(props.images.map((image) => image));
   };
 
   useEffect(handleGetImages, []);
@@ -17,7 +16,8 @@ export function Slide(props) {
   return (
     <div className="box">
       <Carousel
-        showIndicators
+        showThumbs={false}
+        showIndicators={false}
         renderArrowNext={(clickHandler, hasNext) => {
           return (
             hasNext && (
@@ -45,9 +45,16 @@ export function Slide(props) {
         swipeable={false}
       >
         {images.map((URL, index) => (
-          <div id="slide-small">
-            <img alt="sample_file" src={URL} key={index} />
-          </div>
+          <>
+            <div id="slide-small">
+              <img id="slide-image" alt="sample_file" src={URL.url} key={index} />
+            </div>
+            <div id="paras">
+              <p>
+                {URL.description} {URL.id} {URL.user_id}
+              </p>
+            </div>
+          </>
         ))}
       </Carousel>
     </div>

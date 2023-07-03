@@ -1,21 +1,29 @@
 import { Slide } from "./Slide";
+import { ImagesCreate } from "./ImagesCreate";
+import { useEffect, useState } from "react";
 
 export function ImagesIndex(props) {
-  return (
-    <div>
-      <h1>All associated images</h1>
-      <Slide images={props.images} drawing={props.drawing} />
-      {props.images.map((image) => (
-        <div key={image.id}>
-          <p id="handwriting" className="handwriting">
-            {image.description}
-          </p>
-          <p id="handwriting" className="handwriting">
-            Parent: {image.user_id}
-          </p>
-          <br></br>
+  const [showCreate, setShowCreate] = useState(false);
+
+  const handleShowCreate = () => {
+    if (showCreate == true) {
+      setShowCreate(false);
+    } else {
+      setShowCreate(true);
+    }
+  };
+
+  if (props.show) {
+    return (
+      <div key="creating_images">
+        <button onClick={handleShowCreate}>create image</button>
+        <ImagesCreate show={showCreate} drawing={props.drawing} onCreateImage={props.onCreateImage}></ImagesCreate>
+        <br></br>
+        <br></br>
+        <div className="sliding">
+          <Slide images={props.images} drawing={props.drawing} />
         </div>
-      ))}
-    </div>
-  );
+      </div>
+    );
+  }
 }

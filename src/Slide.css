@@ -3,7 +3,7 @@
   height: 50px;
   background-color: transparent;
   border-style: none;
-  right: 5vw;
+  right: 2vw;
   top: 40%;
   position: fixed;
   font-size: 40px;
@@ -22,7 +22,7 @@
   height: 50px;
   background-color: transparent;
   border-style: none;
-  left: 5vw;
+  left: 2vw;
   top: 40%;
   position: fixed;
   font-size: 40px;
@@ -41,9 +41,15 @@
 
 }
 
+#paras{
+  position: relative;
+  font-family: "Headers";
+
+}
+
 #slide-small{
-  max-height: 50vh;
-  max-width: 50vw;
+  max-width: 30vw;
+  max-height: 40vh;
   display: inline-flex;
   justify-content: center;
   position: relative;
@@ -56,4 +62,9 @@
 .carousel-root{
   background-color:transparent;
   height: 30vh;
+}
+
+#slide-image{
+  max-height: 40vh;
+
 }

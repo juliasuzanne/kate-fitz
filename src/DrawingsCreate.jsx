@@ -1,9 +1,24 @@
+import axios from "axios";
+
 export function DrawingsCreate(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
-    props.onCreateDrawing(params, () => event.target.reset());
+    props.onCreateDrawing(params);
   };
+
+  //   const handleFixBox = () => {
+  //   setErrors([]);
+  //   let newPoints = 500 + currentUser.points;
+  //   console.log(newPoints);
+  //   axios
+  //     .patch(`https://moon--egg.fly.dev/users/${id}`, { fixed: true, points: newPoints })
+  //     .then((window.location.href = "/hotel"))
+  //     .catch((error) => {
+  //       console.log(error.response.data.errors);
+  //       setErrors(error.response.data.errors);
+  //     });
+  // };
 
   return (
     <div>
@@ -28,3 +43,16 @@ export function DrawingsCreate(props) {
     </div>
   );
 }
+
+//   const handleFixBox = () => {
+//   setErrors([]);
+//   let newPoints = 500 + currentUser.points;
+//   console.log(newPoints);
+//   axios
+//     .patch(`https://moon--egg.fly.dev/users/${id}`, { fixed: true, points: newPoints })
+//     .then((window.location.href = "/hotel"))
+//     .catch((error) => {
+//       console.log(error.response.data.errors);
+//       setErrors(error.response.data.errors);
+//     });
+// };

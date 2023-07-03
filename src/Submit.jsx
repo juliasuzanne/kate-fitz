@@ -36,7 +36,7 @@ export function Submit(props) {
     if (count == 0 && checked == true) {
       setText("No Results");
     } else {
-      setText("   ");
+      setText(null);
     }
   };
 
@@ -101,6 +101,8 @@ export function Submit(props) {
                 alt=""
               />
               {/* <button onClick={() => props.onReturndrawing(drawing)}> Return drawing, no refunds!</button> */}
+              {/* {items.slice(0, 10).map((item) => (
+                <img src={item.image_url} width="30px" /> */}
             </div>
           ))}
       </div>

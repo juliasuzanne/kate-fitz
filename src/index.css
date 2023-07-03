@@ -8,6 +8,10 @@ html {
  width: auto;
 }
 
+.sliding {
+  padding-bottom: 20vh;
+}
+
 .showingdrawing:hover {
   transform: scale(1.02);
  }
