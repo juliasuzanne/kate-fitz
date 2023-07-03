@@ -18,7 +18,7 @@ export function Home() {
 
   const handleIndexImages = (d) => {
     console.log("handleIndexImages");
-    axios.get(`http://localhost:3000/images/${d.id}.json`).then((response) => {
+    axios.get(`http://kate.fly.dev/images/${d.id}.json`).then((response) => {
       console.log(response.data);
       setImages(response.data);
     });
