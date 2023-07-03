@@ -1,5 +1,4 @@
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./App.css";
 import "./Slide.css";
 import { useState, useEffect } from "react";
@@ -45,14 +44,14 @@ export function SlidePublic(props) {
         swipeable={false}
       >
         {images.map((URL, index) => (
-          <>
+          <div className="test">
             <div id="modal-background">
               <img className="modal-drawing-slide" alt="sample_file" src={URL.url} key={index} />
               <div id="paras">
                 <p> {URL.description} </p>
               </div>
             </div>
-          </>
+          </div>
         ))}
       </Carousel>
     </div>

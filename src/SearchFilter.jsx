@@ -8,7 +8,6 @@ export function SearchFilter(props) {
       <div className="center">
         <input id="myform" type="text" value={searchFilter} onChange={(event) => setSearchFilter(event.target.value)} />{" "}
       </div>
-      <br></br>
 
       <div id="drawings-index">
         {props.drawings

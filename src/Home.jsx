@@ -18,7 +18,7 @@ export function Home() {
 
   const handleIndexImages = (d) => {
     console.log("handleIndexImages");
-    axios.get(`http://localhost:3000/images/${d.id}.json`).then((response) => {
+    axios.get(`https://kate.fly.dev/images/${d.id}.json`).then((response) => {
       console.log(response.data);
       setImages(response.data);
     });
@@ -34,7 +34,7 @@ export function Home() {
 
   const handleIndexDrawings = () => {
     console.log("handleIndexDrawings");
-    axios.get("http://localhost:3000/drawings.json").then((response) => {
+    axios.get("https://kate.fly.dev/drawings.json").then((response) => {
       console.log(response.data);
       setDrawings(response.data);
     });
@@ -89,7 +89,7 @@ export function Home() {
             <div id="show-images-button-text">&#8594;</div>
           </button>
         ) : (
-          <p> </p>
+          <p></p>
         )}
 
         <DrawingsShowPublic
@@ -98,8 +98,9 @@ export function Home() {
           drawing={currentDrawing}
           images={images}
         />
-
-        <SlideIndex show={isImagesVisible} drawing={currentDrawing} images={images} />
+        <div id="slideindex">
+          <SlideIndex show={isImagesVisible} drawing={currentDrawing} images={images} />
+        </div>
       </Modal>
       <Footer />
     </div>

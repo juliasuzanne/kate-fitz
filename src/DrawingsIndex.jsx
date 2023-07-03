@@ -9,10 +9,6 @@ export function DrawingsIndex(props) {
           <p id="handwriting" className="handwriting">
             {drawing.description}
           </p>
-          <br></br>
-          <br></br>
-
-          <br></br>
         </div>
       ))}
     </div>
