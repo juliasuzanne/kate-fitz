@@ -36,7 +36,7 @@ export function Submit(props) {
     if (count == 0 && checked == true) {
       setText("No Results");
     } else {
-      setText("   ");
+      setText(null);
     }
   };
 

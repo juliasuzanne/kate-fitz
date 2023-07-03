@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useRef } from "react";
 import { Submit } from "./Submit";
 import { Login } from "./Login";
 import { DrawingsCreate } from "./DrawingsCreate";
@@ -30,8 +31,11 @@ export function ChangeMachine() {
   const [drawings, setDrawings] = useState([]);
   const [isModalImageVisible, setIsModalImageVisible] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isImagesUpdateVisible, setIsImagesUpdateVisible] = useState(false);
+  const [isDrawingsUpdateVisible, setIsDrawingsUpdateVisible] = useState(true);
   const [currentDrawing, setCurrentDrawing] = useState({});
   const [images, setImages] = useState([]);
+  const [currentdraw, setCurrentDraw] = useState([]);
 
   const [currentImage, setCurrentImage] = useState([]);
 
@@ -39,14 +43,20 @@ export function ChangeMachine() {
     console.log("handleShowModal", drawing);
     setIsModalVisible(true);
     setCurrentDrawing(drawing);
+    handleIndexImages(drawing);
   };
 
-  const handleShowModalImages = () => {
-    handleClose();
-    handleIndexImages();
-    console.log("handleShowModalImages");
-    setIsModalImageVisible(true);
+  const handleShowImageUpdate = () => {
+    setIsDrawingsUpdateVisible(false);
+    setIsImagesUpdateVisible(true);
   };
+
+  const handleShowDrawingsUpdate = () => {
+    setIsImagesUpdateVisible(false);
+    setIsDrawingsUpdateVisible(true);
+  };
+
+  const handleShowModalImages = () => {};
 
   const handleCloseImages = () => {
     console.log("handleCloseImages");
@@ -56,11 +66,13 @@ export function ChangeMachine() {
   const handleClose = () => {
     console.log("handleClose");
     setIsModalVisible(false);
+    setIsDrawingsUpdateVisible(true);
+    setIsImagesUpdateVisible(false);
   };
 
   const handleCreateDrawing = (params, successCallback) => {
     console.log("handleCreateDrawing", params);
-    axios.post("https://kate.fly.dev//drawings.json", params).then((response) => {
+    axios.post("http://localhost:3000/drawings.json", params).then((response) => {
       setDrawings([...drawings, response.data]);
       successCallback();
     });
@@ -68,15 +80,15 @@ export function ChangeMachine() {
 
   const handleCreateImage = (params, successCallback) => {
     console.log("handleCreateImage", params);
-    axios.post(`https://kate.fly.dev//images/${currentDrawing.id}.json`, params).then((response) => {
-      setDrawings([...drawings, response.data]);
+    axios.post(`http://localhost:3000/images.json`, params).then((response) => {
+      setImages([...images, response.data]);
       successCallback();
     });
   };
 
   const handleIndexDrawings = () => {
     console.log("handleIndexDrawings");
-    axios.get("https://kate.fly.dev//drawings.json").then((response) => {
+    axios.get(`http://localhost:3000/drawings.json`).then((response) => {
       console.log(response.data);
       setDrawings(response.data);
     });
@@ -84,7 +96,7 @@ export function ChangeMachine() {
 
   const handleUpdateDrawing = (id, params, successCallback) => {
     console.log("handleUpdateDrawing", params);
-    axios.patch(`https://kate.fly.dev//drawings/${id}.json`, params).then((response) => {
+    axios.patch(`http://localhost:3000/drawings/${id}.json`, params).then((response) => {
       setDrawings(
         drawings.map((drawing) => {
           if (drawing.id === response.data.id) {
@@ -101,7 +113,7 @@ export function ChangeMachine() {
 
   const handleDestroyDrawing = (drawing) => {
     console.log("handleDestroyDrawing", drawing);
-    axios.delete(`https://kate.fly.dev//drawings/${drawing.id}.json`).then((response) => {
+    axios.delete(`http://localhost:3000/drawings/${drawing.id}.json`).then((response) => {
       setDrawings(drawings.filter((d) => d.id !== drawing.id));
       handleClose();
     });
@@ -109,14 +121,15 @@ export function ChangeMachine() {
 
   const handleDestroyImage = (image) => {
     console.log("handleDestroyImage", image);
-    axios.delete(`https://kate.fly.dev//images/${image.id}.json`).then((response) => {
+    axios.delete(`http://localhost:3000/images/${image.id}.json`).then((response) => {
       setImages(images.filter((d) => d.id !== image.id));
       handleClose();
     });
   };
-  const handleIndexImages = () => {
+
+  const handleIndexImages = (d) => {
     console.log("handleIndexImages");
-    axios.get(`https://kate.fly.dev//images/${currentDrawing.id}.json`).then((response) => {
+    axios.get(`http://localhost:3000/images/${d.id}.json`).then((response) => {
       console.log(response.data);
       setImages(response.data);
     });
@@ -142,16 +155,30 @@ export function ChangeMachine() {
           <h1 className="heading">Drawings</h1>
 
           <SearchFilter drawings={drawings} onShowDrawing={handleShowModal} />
-          <Modal show={isModalVisible} onClose={handleClose} onShowImagesIndex={handleShowModalImages}>
+
+          <Modal show={isModalVisible} onGetImages={handleIndexImages} onClose={handleClose}>
+            <button onClick={handleShowDrawingsUpdate}>edit drawing</button>
+            <button onClick={handleShowImageUpdate}>edit images</button>
+
             <DrawingsShow
+              show={isDrawingsUpdateVisible}
               drawing={currentDrawing}
               onUpdateDrawing={handleUpdateDrawing}
               onDestroyDrawing={handleDestroyDrawing}
+              onShowImagesIndex={handleShowModalImages}
+            />
+
+            <ImagesIndex
+              show={isImagesUpdateVisible}
+              drawing={currentDrawing}
+              drawings={drawings}
+              images={images}
+              onCreateImage={handleCreateImage}
             />
           </Modal>
-          <ModalImage show={isModalImageVisible} onGetImages={handleIndexImages} onClose={handleCloseImages}>
-            <ImagesIndex drawing={currentDrawing} drawings={drawings} images={images} />
-          </ModalImage>
+          {/* <ModalImage show={isModalImageVisible} onGetImages={handleIndexImages} onClose={handleCloseImages}>
+            
+          </ModalImage> */}
           <FooterContact />
         </>
       )}

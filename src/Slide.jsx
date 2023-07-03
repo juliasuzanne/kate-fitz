@@ -6,10 +6,9 @@ import { useState, useEffect } from "react";
 
 export function Slide(props) {
   const [images, setImages] = useState([]);
-  const [imageId, setImagesId] = useState([]);
 
   const handleGetImages = () => {
-    setImages(props.images.map((image) => image.url));
+    setImages(props.images.map((image) => image));
   };
 
   useEffect(handleGetImages, []);
@@ -46,7 +45,10 @@ export function Slide(props) {
       >
         {images.map((URL, index) => (
           <div id="slide-small">
-            <img alt="sample_file" src={URL} key={index} />
+            <img alt="sample_file" src={URL.url} key={index} />
+            <p id="subtitle">{URL.description}</p>
+            <p id="subtitle">{URL.id}</p>
+            <p id="subtitle">{URL.user_id}</p>
           </div>
         ))}
       </Carousel>

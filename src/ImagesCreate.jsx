@@ -10,7 +10,7 @@ export function ImagesCreate(props) {
       <h1 className="heading"> Upload image </h1>
       <form className="myform" onSubmit={handleSubmit}>
         <div>
-          Url: <input id="myform" name="url" type="string" />
+          Url: <input id="myform" defaultValue={props.drawing.url} name="url" type="string" />
         </div>
         <div>
           Description: <input id="myform" name="description" type="string" />

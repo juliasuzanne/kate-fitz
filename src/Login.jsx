@@ -14,10 +14,10 @@ export function Login() {
     setErrors([]);
     const params = new FormData(event.target);
     axios
-      .post("https://kate.fly.dev//sessions", params)
+      .post("http://localhost:3000/sessions", params)
       .then((response) => {
         console.log(response.data);
-        axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
+        defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
         localStorage.setItem("jwt", response.data.jwt);
         event.target.reset();
         window.location.href = "/changemachine"; // Change this to hide a modal, redirect to a specific page, etc.
