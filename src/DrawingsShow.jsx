@@ -17,6 +17,7 @@ export function DrawingsShow(props) {
         <p id="handwriting" className="handwriting">
           {props.drawing.description}
         </p>
+        {props.drawing.using_Images === true ? <p> using images </p> : <p> not </p>}
 
         <form onSubmit={handleSubmit}>
           <div>

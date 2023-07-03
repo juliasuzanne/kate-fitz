@@ -9,7 +9,7 @@ export function ModalQuestion(props) {
             OK
           </button>
           <p id="handwriting" className="center">
-            Try searching 'blue', or 'museum'
+            Try searching 'blue', or 'rock'
           </p>
         </div>
       </div>

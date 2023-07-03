@@ -23,16 +23,15 @@
 .modal-main-slide {
   position: fixed;
   background: white;
-  width: 80vw;
-  height: 100vh;
+  width: auto;
+  height: auto;
+  min-height: 80vh;
   top: 50%;
   left: 50%;
-  padding: 2vh;
+  padding: 1em;
   transform: translate(-50%,-50%);
   justify-content: center;
 }
-
-
 
 .modal-main {
   position: fixed;
@@ -51,12 +50,23 @@
   max-width: 80vw;
  }
  
+.modal-main-slide button.close {
+  font-size: 2em;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 0em;
+  z-index: 20;
+  right: 0.2em;
+}
+
 .modal-main button.close {
   font-size: 2em;
   background: none;
   border: none;
   position: absolute;
   top: 0em;
+  z-index: 20;
   right: 0.2em;
 }
 
@@ -73,6 +83,8 @@
   bottom: 0em;
   top: 60%;
   left: 50%;
+  z-index: 20;
+
   transform: translate(-50%,0%);
   font-family: 'Headers';
   color: white;
@@ -87,6 +99,8 @@
   z-index: 15;
   background: none;
   border: none;
+  z-index: 20;
+
   position: absolute;
   top: 0em;
   right: 0em;
@@ -101,6 +115,14 @@
 .modal-drawing-private{
   max-height: 60vh;
   max-width: 60vw;
+}
+
+
+.modal-drawing-slide{
+  max-height: 80vh;
+  max-width: 80vw;
+  height: auto;
+  width: auto;
 }
 
 #handwriting {
