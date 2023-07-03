@@ -44,12 +44,16 @@ export function Slide(props) {
         swipeable={false}
       >
         {images.map((URL, index) => (
-          <div id="slide-small">
-            <img alt="sample_file" src={URL.url} key={index} />
-            <p id="subtitle">{URL.description}</p>
-            <p id="subtitle">{URL.id}</p>
-            <p id="subtitle">{URL.user_id}</p>
-          </div>
+          <>
+            <div id="slide-small">
+              <img id="slide-image" alt="sample_file" src={URL.url} key={index} />
+            </div>
+            <div id="paras">
+              <p>
+                {URL.description} {URL.id} {URL.user_id}
+              </p>
+            </div>
+          </>
         ))}
       </Carousel>
     </div>

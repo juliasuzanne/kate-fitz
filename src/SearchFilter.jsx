@@ -6,13 +6,7 @@ export function SearchFilter(props) {
   return (
     <div>
       <div className="center">
-        <input
-          defaultValue="none"
-          id="myform"
-          type="text"
-          value={searchFilter}
-          onChange={(event) => setSearchFilter(event.target.value)}
-        />{" "}
+        <input id="myform" type="text" value={searchFilter} onChange={(event) => setSearchFilter(event.target.value)} />{" "}
       </div>
       <br></br>
 
@@ -25,7 +19,6 @@ export function SearchFilter(props) {
           )
           .map((drawing) => (
             <div key={drawing.id} id="drawing">
-              <h5 className="handwriting"> {drawing.name} </h5>
               <h5 className="handwriting"> {drawing.id} </h5>
               <img
                 onClick={() => props.onShowDrawing(drawing)}

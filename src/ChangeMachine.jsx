@@ -73,7 +73,7 @@ export function ChangeMachine() {
   const handleCreateDrawing = (params, successCallback) => {
     console.log("handleCreateDrawing", params);
     axios.post("http://localhost:3000/drawings.json", params).then((response) => {
-      setDrawings([...drawings, response.data]);
+      // setDrawings([...drawings, response.data]);
       successCallback();
     });
   };
@@ -90,6 +90,7 @@ export function ChangeMachine() {
     console.log("handleIndexDrawings");
     axios.get(`http://localhost:3000/drawings.json`).then((response) => {
       console.log(response.data);
+      setDrawings([...drawings, response.data]);
       setDrawings(response.data);
     });
   };

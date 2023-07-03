@@ -4,9 +4,10 @@ export function DrawingsCreate(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
-    axios
-      .post(`http://localhost:3000/images.json`, { url: event.target.url.value })
-      .then(props.onCreateDrawing(params, () => event.target.reset()));
+    // axios
+    //   .post(`http://localhost:3000/images.json`, { url: event.target.url.value })
+    //   .then(props.onCreateDrawing(params, () => event.target.reset()));
+    props.onCreateDrawing(params, () => event.target.reset());
   };
 
   //   const handleFixBox = () => {
