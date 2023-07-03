@@ -4,9 +4,8 @@ export function DrawingsCreate(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
-    props.onCreateDrawing(params);
+    props.onCreateDrawing(params, () => event.target.reset());
   };
-
   //   const handleFixBox = () => {
   //   setErrors([]);
   //   let newPoints = 500 + currentUser.points;
