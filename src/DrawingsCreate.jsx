@@ -24,8 +24,8 @@ export function DrawingsCreate(props) {
     <div>
       <h1 className="heading"> Upload drawing </h1>
       <form className="myform" onSubmit={handleSubmit}>
-        <div>
-          Title: <input id="myform" name="name" type="string" />
+        <div hidden="true">
+          Using Images?: <input id="myform" name="using_Images" type="checkbox" defaultValue="false" />
         </div>
         <div>
           Tags: <input id="myform" name="tags" type="string" />

@@ -17,10 +17,11 @@ export function DrawingsShow(props) {
         <p id="handwriting" className="handwriting">
           {props.drawing.description}
         </p>
+        {props.drawing.using_Images === true ? <p> using images </p> : <p> not </p>}
 
         <form onSubmit={handleSubmit}>
           <div>
-            Title: <input defaultValue={props.drawing.name} name="name" type="string" />
+            Additional Images?: <input defaultValue={props.drawing.using_Images} name="using_Images" type="boolean" />
           </div>
           <div>
             Image Url: <input defaultValue={props.drawing.url} name="url" type="string" />
