@@ -4,9 +4,8 @@ export function DrawingsCreate(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
-    props.onCreateDrawing(params);
+    props.onCreateDrawing(params, () => event.target.reset());
   };
-
   //   const handleFixBox = () => {
   //   setErrors([]);
   //   let newPoints = 500 + currentUser.points;
@@ -24,9 +23,6 @@ export function DrawingsCreate(props) {
     <div>
       <h1 className="heading"> Upload drawing </h1>
       <form className="myform" onSubmit={handleSubmit}>
-        <div hidden="true">
-          Using Images?: <input id="myform" name="using_Images" type="checkbox" defaultValue="false" />
-        </div>
         <div>
           Tags: <input id="myform" name="tags" type="string" />
         </div>
@@ -35,6 +31,9 @@ export function DrawingsCreate(props) {
         </div>
         <div>
           url: <input id="myform" name="url" type="string" />
+        </div>
+        <div hidden="true">
+          Using Images?: <input id="myform" name="using_Images" type="boolean" defaultValue="false" />
         </div>
         <button id="" type="submit">
           Upload drawing

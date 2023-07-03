@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Handwriting";   /*Can be any text*/
-  src: local("Handwriting-Regular"),
-    url("/src/assets/Handwriting-Regular.ttf") format("truetype");
+  src: local("Hand-Regular"),
+    url("/src/assets/Hand-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Headers";   /*Can be any text*/
-  src: local("Headers-Regular"),
-    url("/src/assets/Headers-Regular.ttf") format("truetype");
+  src: local("Headers_new-Regular"),
+    url("/src/assets/Headers_new-Regular.ttf") format("truetype");
 }
