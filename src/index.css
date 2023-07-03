@@ -25,7 +25,7 @@ html {
   top: 50%;
   z-index: 10;
   left: 50%;
-  background-color: rgba(255, 0, 0, 0.079);
+  /* background-color: rgba(255, 0, 0, 0.079); */
   position: fixed;
 
 }
