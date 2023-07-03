@@ -16,7 +16,8 @@ export function Slide(props) {
   return (
     <div className="box">
       <Carousel
-        showIndicators
+        showThumbs={false}
+        showIndicators={false}
         renderArrowNext={(clickHandler, hasNext) => {
           return (
             hasNext && (

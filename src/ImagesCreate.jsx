@@ -13,7 +13,7 @@ export function ImagesCreate(props) {
             Url: <input id="myform" defaultValue={props.drawing.url} name="url" type="string" />
           </div>
           <div>
-            Description: <input id="myform" name="description" type="string" />
+            Description: <input id="myform" defaultValue={props.drawing.description} name="description" type="string" />
           </div>
           <div>
             parent: <input id="myform" defaultValue={props.drawing.id} name="user_id" type="integer" />
