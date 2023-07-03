@@ -7,7 +7,6 @@ import { Landing } from "./Landing";
 import { Contact } from "./Contact";
 import { Login } from "./Login";
 import { Slide } from "./Slide";
-import { Photos } from "./Photos";
 import { SearchFilter } from "./SearchFilter";
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/photos" element={<Photos />} />
           <Route path="/" element={<Landing />} />
           <Route path="/slide" element={<Slide />} />
           <Route path="/contact" element={<Contact />} />
