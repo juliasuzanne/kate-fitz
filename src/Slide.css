@@ -47,6 +47,12 @@
 
 }
 
+#paras-public{
+  position: relative;
+  font-family: "Headers";
+
+}
+
 #slide-small{
   max-width: 30vw;
   max-height: 40vh;

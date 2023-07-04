@@ -4,6 +4,7 @@ export function ImagesCreate(props) {
     const params = new FormData(event.target);
     props.onCreateImage(params, () => event.target.reset());
   };
+
   if (props.show) {
     return (
       <div>
@@ -16,7 +17,7 @@ export function ImagesCreate(props) {
             Description: <input id="myform" defaultValue={props.drawing.description} name="description" type="string" />
           </div>
           <div>
-            parent: <input id="myform" defaultValue={props.drawing.id} name="user_id" type="integer" />
+            parent: <input id="myform" defaultValue={props.drawing.id} name="drawing_id" type="integer" />
           </div>
           <button id="" type="submit">
             Upload image

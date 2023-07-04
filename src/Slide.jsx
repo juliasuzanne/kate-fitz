@@ -3,6 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./App.css";
 import "./Slide.css";
 import { useState, useEffect } from "react";
+import { ImagesShow } from "./ImagesShow";
 
 export function Slide(props) {
   const [images, setImages] = useState([]);
@@ -51,8 +52,17 @@ export function Slide(props) {
             </div>
             <div id="paras">
               <p>
-                {URL.description} {URL.id} {URL.user_id}
+                {URL.description} {URL.id} {URL.drawing_id}
               </p>
+              <button
+                onClick={() => {
+                  props.onDestroyImage(URL.id);
+                }}
+              >
+                delete image
+              </button>
+
+              <ImagesShow image={URL} onUpdateImage={props.onUpdateImage} />
             </div>
           </>
         ))}

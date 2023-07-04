@@ -19,8 +19,13 @@ export function ImagesIndex(props) {
         <button onClick={handleShowCreate}>create image</button>
         <ImagesCreate show={showCreate} drawing={props.drawing} onCreateImage={props.onCreateImage}></ImagesCreate>
 
-        <div className="sliding">
-          <Slide images={props.images} drawing={props.drawing} />
+        <div key="test" className="sliding">
+          <Slide
+            onDestroyImage={props.onDestroyImage}
+            onUpdateImage={props.onUpdateImage}
+            images={props.images}
+            drawing={props.drawing}
+          />
         </div>
       </div>
     );

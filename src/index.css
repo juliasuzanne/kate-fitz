@@ -9,7 +9,9 @@ html {
 .modal-main-slide {
   position: relative;
   background: rgb(255, 255, 255);
+  width: auto;
   max-width: 70%;
+  max-height: 100vh;
   height: auto;
   padding: 2em;
   justify-content: center;
@@ -20,8 +22,11 @@ html {
 
 
 .modal-drawing-slide{
+  max-height: 80vh;
   height: auto;
   width: auto;
+  padding-bottom: 30vh;
+  object-fit: scale-down;
 
 }
 
@@ -30,14 +35,14 @@ html {
 }
 
 .modal-drawing{
+  height: 80vh;
   display: flex;
   position: relative;
   justify-content: center;
-  max-height: 80vh;
   top:50%;
   left: 50%;
   transform: translate(-50%, 0%);
-  max-width: 80vw;
+  width: 80vw;
   object-fit: contain;
 
   }

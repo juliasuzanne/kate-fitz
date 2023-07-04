@@ -18,6 +18,7 @@ export function SlidePublic(props) {
       <Carousel
         showThumbs={false}
         showIndicators={false}
+        infiniteLoop={true}
         renderArrowNext={(clickHandler, hasNext) => {
           return (
             hasNext && (
@@ -42,7 +43,7 @@ export function SlidePublic(props) {
           );
         }}
         transitionTime={310}
-        swipeable={false}
+        swipeable={true}
       >
         {images.map((URL, index) => (
           <div className="test">
