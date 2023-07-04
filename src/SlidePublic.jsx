@@ -49,9 +49,7 @@ export function SlidePublic(props) {
           <div className="test">
             <div id="modal-background">
               <img className="modal-drawing-slide" alt="sample_file" src={URL.url} key={index} />
-              <div id="paras">
-                <p> {URL.description} </p>
-              </div>
+              <div id="paras">{URL.description}</div>
             </div>
           </div>
         ))}

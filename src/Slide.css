@@ -42,14 +42,22 @@
 }
 
 #paras{
-  position: relative;
-  font-family: "Headers";
+  text-align: center;
+  max-width: 50vw;
+  font-family: "Handwriting";
+  position: absolute;
+  bottom: -9vh;
+  transform: translate(2.5%, 50%);
 
 }
 
 #paras-public{
-  position: relative;
-  font-family: "Headers";
+  text-align: center;
+  max-width: 50vw;
+  font-family: "Handwriting";
+  position: absolute;
+  bottom: -9vh;
+  transform: translate(2.5%, 50%);
 
 }
 
