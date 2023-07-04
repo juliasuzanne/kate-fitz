@@ -35,17 +35,31 @@ html {
 }
 
 .modal-drawing{
-  height: 80vh;
-  display: flex;
+  height: 70vh;
+  display: inline-flex;
   position: relative;
   justify-content: center;
-  top:50%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, -5%);
   width: 80vw;
   object-fit: contain;
 
   }
+
+  #modal-drawing-home {
+    display: inline-flex;
+    
+  }
+  
+  #handwriting-modal {
+    text-align: center;
+    max-width: 50vw;
+    font-family: "Handwriting";
+    position: absolute;
+    bottom: -9vh;
+    transform: translate(2.5%, 50%);
+  }
+  
 
 .sliding-public {
   max-height: 60vh;
@@ -185,6 +199,7 @@ html {
   padding: 20px;
   font-family: 'Handwriting';
 }
+
 
 .modal-main-q {
   position: fixed;
