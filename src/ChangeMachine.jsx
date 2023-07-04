@@ -72,7 +72,7 @@ export function ChangeMachine() {
 
   const handleCreateDrawing = (params, successCallback) => {
     console.log("handleCreateDrawing", params);
-    axios.post("http://localhost:3000/drawings.json", params).then((response) => {
+    axios.post("https://kate.fly.dev/drawings.json", params).then((response) => {
       //setDrawings([...drawings, response.data]);
       successCallback();
     });
@@ -80,7 +80,7 @@ export function ChangeMachine() {
 
   const handleCreateImage = (params, successCallback) => {
     console.log("handleCreateImage", params);
-    axios.post(`http://localhost:3000/images.json`, params).then((response) => {
+    axios.post(`https://kate.fly.dev/images.json`, params).then((response) => {
       setImages([...images, response.data]);
       successCallback();
     });
@@ -88,7 +88,7 @@ export function ChangeMachine() {
 
   const handleIndexDrawings = () => {
     console.log("handleIndexDrawings");
-    axios.get(`http://localhost:3000/drawings.json`).then((response) => {
+    axios.get(`https://kate.fly.dev/drawings.json`).then((response) => {
       console.log(response.data);
       setDrawings([...drawings, response.data]);
       setDrawings(response.data);
@@ -97,7 +97,7 @@ export function ChangeMachine() {
 
   const handleUpdateDrawing = (id, params, successCallback) => {
     console.log("handleUpdateDrawing", params);
-    axios.patch(`http://localhost:3000/drawings/${id}.json`, params).then((response) => {
+    axios.patch(`https://kate.fly.dev/drawings/${id}.json`, params).then((response) => {
       setDrawings(
         drawings.map((drawing) => {
           if (drawing.id === response.data.id) {
@@ -114,7 +114,7 @@ export function ChangeMachine() {
 
   const handleUpdateImage = (id, params, successCallback) => {
     console.log("handleUpdateImage", params);
-    axios.patch(`http://localhost:3000/images/${id}.json`, params).then((response) => {
+    axios.patch(`https://kate.fly.dev/images/${id}.json`, params).then((response) => {
       setImages(
         images.map((image) => {
           if (image.id === response.data.id) {
@@ -131,7 +131,7 @@ export function ChangeMachine() {
 
   const handleDestroyDrawing = (drawing) => {
     console.log("handleDestroyDrawing", drawing);
-    axios.delete(`http://localhost:3000/drawings/${drawing.id}.json`).then((response) => {
+    axios.delete(`https://kate.fly.dev/drawings/${drawing.id}.json`).then((response) => {
       setDrawings(drawings.filter((d) => d.id !== drawing.id));
       handleClose();
     });
@@ -139,7 +139,7 @@ export function ChangeMachine() {
 
   const handleDestroyImage = (id) => {
     console.log("handleDestroyImage", id);
-    axios.delete(`http://localhost:3000/images/${id}.json`).then((response) => {
+    axios.delete(`https://kate.fly.dev/images/${id}.json`).then((response) => {
       setImages(images.filter((d) => d.id !== id));
       handleClose();
     });
@@ -147,7 +147,7 @@ export function ChangeMachine() {
 
   const handleIndexImages = (d) => {
     console.log("handleIndexImages");
-    axios.get(`http://localhost:3000/images/${d.id}.json`).then((response) => {
+    axios.get(`https://kate.fly.dev/images/${d.id}.json`).then((response) => {
       console.log(response.data);
       setImages(response.data);
     });

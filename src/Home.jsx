@@ -18,7 +18,7 @@ export function Home() {
 
   const handleIndexImages = (d) => {
     console.log("handleIndexImages");
-    axios.get(`http://localhost:3000/images/${d.id}.json`).then((response) => {
+    axios.get(`https://kate.fly.dev/images/${d.id}.json`).then((response) => {
       console.log(response.data);
       setImages(response.data);
     });
@@ -34,7 +34,7 @@ export function Home() {
 
   const handleIndexDrawings = () => {
     console.log("handleIndexDrawings");
-    axios.get("http://localhost:3000/drawings.json").then((response) => {
+    axios.get("https://kate.fly.dev/drawings.json").then((response) => {
       console.log(response.data);
       setDrawings(response.data);
     });
