@@ -252,11 +252,11 @@ html {
 .pregunta {
   font-size: 4vh;
   color: rgb(5, 27, 5);
-  width: 8vh;
-  height: 8vh;
+  width: 12vh;
+  height: 12vh;
   background-color: transparent;
-  background-image: url('https://static.vecteezy.com/system/resources/previews/010/331/351/original/watercolor-paint-stains-backgrounds-art-element-illustration-for-your-design-free-png.png');
-  background-size: 8vh, 8vw;
+  background-image: url('/src/assets/moon_.png');
+  background-size: 12vh, 12vw;
   background-repeat: no-repeat;
   border-style: none;
   font-family: 'Headers', 'Handwriting';
