@@ -6,20 +6,6 @@ html {
   padding-bottom: 20vh;
 }
 
-.modal-main-slide {
-  position: relative;
-  background: rgb(255, 255, 255);
-  width: auto;
-  max-width: 75%;
-  max-height: 75vh;
-  height: auto;
-  padding: 2em;
-  justify-content: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 #slideindex {
   padding-bottom:0vh;
 }
@@ -27,7 +13,6 @@ html {
 .modal-drawing{
   max-height: 80vh;
   max-width: 80vw;
-
   }
 
 .sliding-public {
@@ -88,6 +73,7 @@ html {
   left: 50%;
   transform: translate(-50%,-50%);
   padding: 1em;
+  justify-content: center;
 }
 
 .modal-main button.close {
@@ -100,6 +86,9 @@ html {
   right: 0.2em;
 }
 
+.center-contents {
+  justify-content: center;
+}
  
 .modal-main button.close:hover {
   transform: scale(1.1);
@@ -395,4 +384,18 @@ body {
 
 .modal-slide-close:hover{
   color: black;
+} 
+
+.modal-main-slide {
+  position: relative;
+  background: rgb(255, 255, 255);
+  width: auto;
+  max-width: 75%;
+  max-height: 75vh;
+  height: auto;
+  padding: 2em;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 } */
