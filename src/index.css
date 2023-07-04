@@ -10,7 +10,6 @@ html {
   position: relative;
   background: rgb(255, 255, 255);
   max-width: 70%;
-  max-height: 90vh;
   height: auto;
   padding: 2em;
   justify-content: center;
@@ -21,15 +20,13 @@ html {
 
 
 .modal-drawing-slide{
-  max-height: 80vh;
   height: auto;
   width: auto;
-  object-fit: scale-down;
 
 }
 
 #slideindex {
-  padding-bottom:35vh;
+  padding-bottom:0vh;
 }
 
 .modal-drawing{
