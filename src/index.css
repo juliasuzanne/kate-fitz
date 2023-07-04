@@ -10,7 +10,7 @@ html {
   position: relative;
   background: rgb(255, 255, 255);
   width: auto;
-  max-width: 65%;
+  max-width: 75%;
   max-height: 75vh;
   height: auto;
   padding: 2em;
@@ -20,46 +20,15 @@ html {
   transform: translate(-50%, -50%);
 }
 
-
-.modal-drawing-slide{
-  max-height: 80vh;
-  height: auto;
-  width: auto;
-  padding-bottom: 30vh;
-  object-fit: scale-down;
-
-}
-
 #slideindex {
   padding-bottom:0vh;
 }
 
 .modal-drawing{
-  height: 70vh;
-  display: inline-flex;
-  position: relative;
-  justify-content: center;
-  left: 50%;
-  transform: translate(-50%, -5%);
-  width: 80vw;
-  object-fit: contain;
+  max-height: 80vh;
+  max-width: 80vw;
 
   }
-
-  #modal-drawing-home {
-    display: inline-flex;
-    
-  }
-  
-  #handwriting-modal {
-    text-align: center;
-    max-width: 50vw;
-    font-family: "Handwriting";
-    position: absolute;
-    bottom: -9vh;
-    transform: translate(2.5%, 50%);
-  }
-  
 
 .sliding-public {
   max-height: 60vh;
@@ -104,20 +73,9 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  width:100%;
+  width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1000;
-}
-
-.modal-background-slide {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width:100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,.6);
   z-index: 1000;
 }
 
@@ -129,18 +87,7 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  padding: 100%;
-  justify-content: center;
-}
-
-.modal-main-slide button.close {
-  font-size: 2em;
-  background: none;
-  border: none;
-  position: absolute;
-  top: 0em;
-  z-index: 20;
-  right: 0.2em;
+  padding: 1em;
 }
 
 .modal-main button.close {
@@ -175,23 +122,6 @@ html {
 
 .modal-question-close:hover{
   color:antiquewhite;
-}
-
-.modal-slide-close{
-  font-size: 2em;
-  z-index: 15;
-  background: none;
-  border: none;
-  z-index: 20;
-  position: absolute;
-  top: 0em;
-  right: 0em;
-  font-family: 'Headers';
-  color:rgba(0, 0, 0, 0.514)
-}
-
-.modal-slide-close:hover{
-  color: black;
 }
 
 
@@ -362,10 +292,6 @@ transform: translate(-50%, -50%);
     50% {transform: scale(1.01); color: lightgrey}
     75% { transform: scale(1); color: rgb(73, 120, 114)}
     100% { transform: scale(1.01); color: lightgrey}
-
-
-
-
   }
 
 
@@ -385,6 +311,14 @@ transform: translate(-50%, -50%);
 .handwriting {
   font-family:'Handwriting', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 #handwriting {
@@ -444,3 +378,21 @@ body {
   text-decoration: none;
 }
 
+
+
+/* .modal-slide-close{
+  font-size: 2em;
+  z-index: 15;
+  background: none;
+  border: none;
+  z-index: 20;
+  position: absolute;
+  top: 0em;
+  right: 0em;
+  font-family: 'Headers';
+  color:rgba(0, 0, 0, 0.514)
+}
+
+.modal-slide-close:hover{
+  color: black;
+} */

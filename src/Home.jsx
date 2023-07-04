@@ -77,20 +77,19 @@ export function Home() {
             console.log(currentItem);
           }}
            */}
-        {currentDrawing.using_Images === true ? (
+        {/* {currentDrawing.using_Images === true ? (
           <button
             hidden={isButtonVisible}
             id="show-images-button"
             onClick={() => {
               handleShowImages();
               handleShowButton();
-            }}
-          >
-            <div id="show-images-button-text">&#8594;</div>
+          //   }} */}
+        {/* <div id="show-images-button-text">&#8594;</div>
           </button>
         ) : (
           <p></p>
-        )}
+        )} */}
 
         <DrawingsShowPublic
           show={isDrawingsVisible}
@@ -98,9 +97,9 @@ export function Home() {
           drawing={currentDrawing}
           images={images}
         />
-        <div id="slideindex">
+        {/* <div id="slideindex">
           <SlideIndex show={isImagesVisible} drawing={currentDrawing} images={images} />
-        </div>
+        </div> */}
       </Modal>
       <Footer />
     </div>
