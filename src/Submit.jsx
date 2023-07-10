@@ -70,6 +70,7 @@ export function Submit(props) {
       <div className="containerHeader">
         <form className="center" onSubmit={handleChangeList}>
           <input
+            autoComplete="none"
             autoFocus
             id="myform-main"
             type="string"
