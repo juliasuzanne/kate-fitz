@@ -8,7 +8,6 @@ import { Contact } from "./Contact";
 import { Login } from "./Login";
 import { Slide } from "./Slide";
 import { SearchFilter } from "./SearchFilter";
-
 function App() {
   return (
     <div className="home">

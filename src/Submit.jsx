@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ModalQuestion } from "./ModalQuestion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export function Submit(props) {
   const [searchFilter, setSearchFilter] = useState("  ");
@@ -93,7 +94,7 @@ export function Submit(props) {
           .filter((drawings) => drawings.tags.toLowerCase().includes(searchFilter))
           .map((drawing) => (
             <div key={drawing.id} id="drawing">
-              <img
+              <LazyLoadImage
                 onClick={() => props.onShowDrawing(drawing)}
                 height="300px"
                 className="showingdrawing"
