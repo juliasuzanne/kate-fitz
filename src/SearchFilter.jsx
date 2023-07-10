@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export function SearchFilter(props) {
   const [searchFilter, setSearchFilter] = useState("");
@@ -19,7 +20,7 @@ export function SearchFilter(props) {
           .map((drawing) => (
             <div key={drawing.id} id="drawing">
               <h5 className="handwriting"> {drawing.id} </h5>
-              <img
+              <LazyLoadImage
                 onClick={() => props.onShowDrawing(drawing)}
                 height="300px"
                 className="showingdrawing"
