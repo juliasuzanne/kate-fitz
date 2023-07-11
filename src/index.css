@@ -174,7 +174,7 @@ html {
   width: 12vh;
   height: 12vh;
   background-color: transparent;
-  background-image: url('/src/assets/moon_.png');
+  background-image: url('/src/assets/KFicon.png');
   background-size: 12vh, 12vw;
   background-repeat: no-repeat;
   border-style: none;
@@ -198,7 +198,7 @@ html {
   height: 400%;
   /* transform: translate(0%, -13%); */
   z-index: 0;
-  background-image: url("https://res.cloudinary.com/dytb4ayqj/image/upload/v1688241761/background_nexxec.jpg");
+  background-image: url("https://res.cloudinary.com/dytb4ayqj/image/upload/v1689118093/background_nexxec_iwsdda.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   
