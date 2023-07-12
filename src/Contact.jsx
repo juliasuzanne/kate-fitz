@@ -4,8 +4,7 @@ export function Contact() {
   return (
     <div>
       <h1 className="heading-contact">CONTACT</h1>
-      <p className="handwriting"> kate.xox.etak@gmail.com </p>
-      <p className="handwriting"> do not email </p>
+      <p className="handwriting"> katefitzart@gmail.com </p>
       <FooterContact />
     </div>
   );
