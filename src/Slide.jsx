@@ -6,14 +6,6 @@ import { useState, useEffect } from "react";
 import { ImagesShow } from "./ImagesShow";
 
 export function Slide(props) {
-  const [images, setImages] = useState([]);
-
-  const handleGetImages = () => {
-    setImages(props.images.map((image) => image));
-  };
-
-  useEffect(handleGetImages, []);
-
   return (
     <div className="box">
       <Carousel
@@ -45,7 +37,7 @@ export function Slide(props) {
         transitionTime={310}
         swipeable={false}
       >
-        {images.map((URL, index) => (
+        {props.images.map((URL, index) => (
           <>
             <div id="slide-small">
               <img id="slide-image" alt="sample_file" src={URL.url} key={index} />

@@ -5,14 +5,6 @@ import "./Slide.css";
 import { useState, useEffect } from "react";
 
 export function SlidePublic(props) {
-  const [images, setImages] = useState([]);
-
-  const handleGetImages = () => {
-    setImages(props.images.map((image) => image));
-  };
-
-  useEffect(handleGetImages, []);
-
   return (
     <div className="box">
       <Carousel
@@ -45,12 +37,10 @@ export function SlidePublic(props) {
         transitionTime={310}
         swipeable={true}
       >
-        {images.map((URL, index) => (
-          <div className="test">
-            <div id="modal-background">
-              <img className="modal-drawing-slide" alt="sample_file" src={URL.url} key={index} />
-              <div id="paras">{URL.description}</div>
-            </div>
+        {props.images.map((URL, index) => (
+          <div className="center-contents">
+            <img className="modal-drawing" alt="sample_file" src={URL.url} key={index} />
+            <div id="paras">{URL.description}</div>
           </div>
         ))}
       </Carousel>

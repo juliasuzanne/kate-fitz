@@ -8,8 +8,8 @@ import { SlidePublic } from "./SlidePublic";
 import { SlideIndex } from "./SlideIndex";
 
 export function Home() {
-  const [isImagesVisible, setIsImagesVisible] = useState(false);
-  const [isDrawingsVisible, setIsDrawingsVisible] = useState(true);
+  const [isImagesVisible, setIsImagesVisible] = useState(true);
+  const [isDrawingsVisible, setIsDrawingsVisible] = useState(false);
   const [isButtonVisible, setIsButtonVisible] = useState("");
   const [drawings, setDrawings] = useState([]);
   const [images, setImages] = useState([]);
@@ -20,7 +20,7 @@ export function Home() {
     console.log("handleIndexImages");
     axios.get(`https://kate.fly.dev/images/${d.id}.json`).then((response) => {
       console.log(response.data);
-      setImages(response.data);
+      setImages(response.data.map((image) => image));
     });
   };
 
@@ -42,9 +42,21 @@ export function Home() {
 
   const handleShowModal = (drawing) => {
     console.log("handleShowModal", drawing);
-    setIsModalVisible(true);
     setCurrentDrawing(drawing);
     handleIndexImages(drawing);
+    setIsModalVisible(true);
+  };
+
+  const handleShowSlide = (drawing) => {
+    {
+      setCurrentDrawing(drawing);
+      handleShowModal(drawing);
+      if (drawing.using_Images === true) {
+        handleShowImages();
+      } else {
+        handleShowDrawings();
+      }
+    }
   };
 
   const handleShowImages = () => {
@@ -65,41 +77,20 @@ export function Home() {
 
   return (
     <div>
-      <Submit drawings={drawings} onShowDrawing={handleShowModal} />
+      <Submit drawings={drawings} onShowDrawing={handleShowSlide} />
 
-      <Modal show={isModalVisible} onShowDrawing={handleShowModal} drawing={currentDrawing} onClose={handleClose}>
-        {/* <button onClick={handleShowDrawings}>drawing</button>
-        <button onClick={handleShowImages}> images</button> */}
-
-        {/* onClick={() => {
-            handleCatalog();
-            setCurrentItem(item.image_url);
-            console.log(currentItem);
-          }}
-           */}
-        {/* {currentDrawing.using_Images === true ? (
-          <button
-            hidden={isButtonVisible}
-            id="show-images-button"
-            onClick={() => {
-              handleShowImages();
-              handleShowButton();
-          //   }} */}
-        {/* <div id="show-images-button-text">&#8594;</div>
-          </button>
-        ) : (
-          <p></p>
-        )} */}
-
-        <DrawingsShowPublic
-          show={isDrawingsVisible}
-          onShowImages={handleShowImages}
-          drawing={currentDrawing}
-          images={images}
-        />
-        {/* <div id="slideindex">
-          <SlideIndex show={isImagesVisible} drawing={currentDrawing} images={images} />
-        </div> */}
+      <Modal show={isModalVisible} onShowDrawing={handleShowSlide} drawing={currentDrawing} onClose={handleClose}>
+        <div>
+          <DrawingsShowPublic
+            show={isDrawingsVisible}
+            onShowImages={handleShowImages}
+            drawing={currentDrawing}
+            images={images}
+          />
+          <div id="slideindex">
+            <SlideIndex show={isImagesVisible} drawing={currentDrawing} images={images} />
+          </div>
+        </div>
       </Modal>
       <Footer />
     </div>
