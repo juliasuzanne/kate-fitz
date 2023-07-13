@@ -14,9 +14,13 @@ html {
   max-width: 70vw;
   }
 
+.modal-drawing-slide{
+    max-height: 70vh;
+    max-width: 70vw;
+}
+
 .sliding-public {
-  width: auto;
-  height: auto;
+  min-width: 70vw;
 }
 
 #show-images-button{

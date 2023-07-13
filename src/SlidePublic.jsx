@@ -39,7 +39,7 @@ export function SlidePublic(props) {
       >
         {props.images.map((URL, index) => (
           <div className="center-contents">
-            <img className="modal-drawing" alt="sample_file" src={URL.url} key={index} />
+            <img className="modal-drawing-slide" alt="sample_file" src={URL.url} key={index} />
             <div id="paras">{URL.description}</div>
           </div>
         ))}
