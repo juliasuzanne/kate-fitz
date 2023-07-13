@@ -13,8 +13,13 @@
   transform: scale(1.2);
 }
 
+
 .left-button:hover {
   transform: scale(1.2);
+}
+
+.carousel img {
+    object-fit: contain;
 }
 
 .left-button {
@@ -44,8 +49,8 @@
 #paras{
   text-align: center;
   max-width: 50vw;
+  padding-top: 1vh;
   font-family: "Handwriting";
-  font-size: 1vw;
   position: relative;
   transform: translate(0%, 0%);
   justify-content: center;
