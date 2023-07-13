@@ -74,18 +74,6 @@ html {
   justify-content: center;
 }
 
-.modal-main-slide {
-  position: fixed;
-  background: white;
-  width: auto;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  padding: 1em;
-  justify-content: center;
-}
-
 
 
 .modal-main button.close {
@@ -213,7 +201,7 @@ html {
   /* transform: translate(0%, -13%); */
   z-index: 0;
   background-image: url("https://res.cloudinary.com/dytb4ayqj/image/upload/v1689118093/background_nexxec_iwsdda.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: 100%;
   
 }
