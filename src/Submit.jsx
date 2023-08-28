@@ -100,7 +100,7 @@ export function Submit(props) {
                 height="300px"
                 className="showingdrawing"
                 effect="blur"
-                src={drawing.url}
+                src={drawing.url.replace("upload", "upload/w_300,f_auto/")}
                 alt=""
               />
             </div>
