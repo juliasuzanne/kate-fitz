@@ -24,7 +24,7 @@ export function SearchFilter(props) {
                 onClick={() => props.onShowDrawing(drawing)}
                 height="300px"
                 className="showingdrawing"
-                src={drawing.url.replace("upload", "upload/w_500,f_auto/")}
+                src={drawing.url}
                 alt=""
               />
               <p id="handwriting" className="handwriting">
