@@ -10,8 +10,9 @@ html {
 }
 
 .modal-drawing{
-  max-height: 70vh;
-  max-width: 70vw;
+  max-height: 90vh;
+  background-color: transparent;
+  max-width: 90vw;
   }
 
 .modal-drawing-slide{
@@ -68,7 +69,7 @@ html {
 
 .modal-main {
   position: fixed;
-  background: white;
+  background: transparent;
   width: auto;
   height: auto;
   top: 50%;
@@ -85,16 +86,17 @@ html {
   background: none;
   border: none;
   position: fixed;
-  top: 0em;
+  top: -0.25em;
   z-index: 20;
-  right: 0em;
-  color: black;
+  right: -0.25em;
+  color: rgb(0, 0, 0);
 
   
 }
 
 .center-contents {
   justify-content: center;
+  
 }
  
 .modal-main button.close:hover {
